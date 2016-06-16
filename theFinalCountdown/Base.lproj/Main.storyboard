@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G61-zh-9P3">
-                                <rect key="frame" x="45" y="333" width="43" height="30"/>
+                                <rect key="frame" x="37" y="333" width="74" height="29"/>
                                 <state key="normal" title="Pause">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,6 +56,7 @@
                     <connections>
                         <outlet property="clockLabel" destination="ACg-uO-YjG" id="zCD-8K-fI7"/>
                         <outlet property="datePicker" destination="t0q-ZD-j8N" id="LIj-DU-2ss"/>
+                        <outlet property="pauseButton" destination="G61-zh-9P3" id="Ccn-Wp-l6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -47,19 +47,31 @@ int secondsLeft;
         [button setTitle:@"Start" forState:UIControlStateNormal];
         [self.timer invalidate];
         self.timer = nil;
+        secondsLeft = 0;
+        [self.pauseButton setEnabled:NO];
     } else {
         NSTimeInterval countDownDuration = self.datePicker.countDownDuration;
-        NSLog(@"%f", countDownDuration);
         secondsLeft = countDownDuration;
         [self.datePicker setHidden:YES];
         [self.clockLabel setHidden:NO];
         UIButton *button = sender;
         [button setTitle:@"Cancel" forState:UIControlStateNormal];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+        [self.pauseButton setEnabled:YES];
     }
 }
 
 - (IBAction)pauseButton:(id)sender {
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+        UIButton *button = sender;
+        [button setTitle:@"Resume" forState:UIControlStateNormal];
+    } else {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+        UIButton *button = sender;
+        [button setTitle:@"Pause" forState:UIControlStateNormal];
+    }
 }
 
 -(void)tick:(NSTimer *)theTimer {
@@ -69,7 +81,6 @@ int secondsLeft;
         minutes = (secondsLeft % 3600) / 60;
         seconds = (secondsLeft %3600) % 60;
         NSString *timeLeft = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
-        NSLog(@"%@", timeLeft);
         self.clockLabel.text = timeLeft;
     } else {
         self.clockLabel.text = @"00:00:00";

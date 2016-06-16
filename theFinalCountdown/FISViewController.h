@@ -12,6 +12,7 @@
 
 - (IBAction)startButton:(id)sender;
 - (IBAction)pauseButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UILabel *clockLabel;
