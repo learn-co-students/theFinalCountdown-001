@@ -10,4 +10,13 @@
 
 @interface FISViewController : UIViewController
 
+- (IBAction)startButton:(id)sender;
+- (IBAction)pauseButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UILabel *clockLabel;
+@property (nonatomic) NSTimer *timer;
+
+-(void)tick:(NSTimer *)theTimer;
+
 @end
