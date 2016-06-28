@@ -21,7 +21,7 @@ Your goal is to make a pared down version of this:
   * Don't do the `When Timer Ends` feature
   * For the first iteration, just use regular buttons. That lower grey thing is half of the height of the view. 
   * Center the start/pause buttons in the lower grey sections
-  * For right now, when you tap the start button the `UIPickerView` should be hidden, and the label with a time should be shown. Don't worry about making it work just yet.
+  * For right now, when you tap the start button the `UIDatePicker` should be hidden, and the label with a time should be shown. Don't worry about making it work just yet.
 
 ## Making it Work
 
@@ -42,3 +42,5 @@ Your goal is to make a pared down version of this:
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/theFinalCountdown' title='The Final Countdown'>The Final Countdown</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/theFinalCountdown'>Final Countdown (Using IB)</a> on Learn.co and start learning to code for free.</p>
